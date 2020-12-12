@@ -110,16 +110,12 @@ body {
 }
 .nav {
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  top: 3rem;
+  right: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 6rem;
-  height: 6rem;
-  border-radius: 100%;
-  background-color: $black;
-  z-index: 1000;
+  z-index: 2000;
   &__btn {
     display: flex;
     justify-content: center;
@@ -161,6 +157,34 @@ body {
     text-decoration: none;
     font-size: 4rem;
     font-family: cyberpunk;
+  }
+  &__background {
+    position: fixed;
+    top: 2.5rem;
+    right: 2.5rem;
+    width: 5rem;
+    height: 5rem;
+    background-color: $black;
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+  }
+  &__background-window {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  &__links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1500;
+  }
+  &__show {
+    display: block;
   }
 }
 // animation
