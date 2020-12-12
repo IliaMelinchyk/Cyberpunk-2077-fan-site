@@ -1,0 +1,21 @@
+{
+  "name": "cyberpunk",
+  "version": "1.0.0",
+  "description": "Cyberpunk 2077 fan site",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Ilia Melinchyk",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "sass": "^1.26.10"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "gsap": "^3.5.1",
+    "regenerator-runtime": "^0.13.7"
+  }
+}

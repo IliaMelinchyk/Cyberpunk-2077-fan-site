@@ -1,0 +1,175 @@
+@font-face {
+  font-family: Cyberpunk;
+  src: url(/src/fonts/Cyberpunk.ttf);
+}
+$yellow: #fcee09;
+$yellow-dark: #ece108;
+$black: #050a0e;
+$blue: #00f0ff;
+$white: #dad0c0;
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+}
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+  position: relative;
+  background-color: $black;
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+::selection {
+  background-color: $black;
+  color: $white;
+}
+
+.header {
+  height: 95vh;
+  background-image: radial-gradient(rgba($yellow, 0.8), rgba($yellow, 0.8)),
+    url(/src/img/background.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "logo video" "v video";
+  &__logo {
+    grid-area: logo;
+    align-self: center;
+    justify-self: center;
+    & img {
+      height: 20vh;
+    }
+  }
+  &__v {
+    grid-area: v;
+    align-self: end;
+    justify-self: center;
+    & img {
+      height: 75vh;
+    }
+  }
+  &__video {
+    grid-area: video;
+    align-self: center;
+    justify-self: center;
+    & h2 {
+      font-family: cyberpunk;
+      text-align: center;
+      font-size: 3rem;
+      text-shadow: 1px 1px 1px $blue;
+    }
+    & iframe {
+      border: 3px solid $blue;
+      box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+.nav {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100%;
+  background-color: $black;
+  z-index: 1000;
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+  &__btn-line {
+    width: 4rem;
+    height: 5px;
+    background: $white;
+    border-radius: 0.4rem;
+    transition: all 0.5s ease-in-out;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 4rem;
+      height: 5px;
+      background: $white;
+      border-radius: 4px;
+      transition: all 0.5s ease-in-out;
+    }
+    &::before {
+      transform: translateY(-1.4rem);
+    }
+    &::after {
+      transform: translateY(1.4rem);
+    }
+  }
+
+  &__links {
+    list-style: none;
+  }
+  &__link {
+    color: $white;
+    text-decoration: none;
+    font-size: 4rem;
+    font-family: cyberpunk;
+  }
+}
+// animation
+.nav__btn.open .nav__btn-line {
+  background: transparent;
+}
+.nav__btn.open .nav__btn-line::before {
+  transform: rotate(135deg);
+}
+.nav__btn.open .nav__btn-line::after {
+  transform: rotate(-135deg);
+}
