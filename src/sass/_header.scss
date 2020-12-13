@@ -1,0 +1,43 @@
+.header {
+  height: 95vh;
+  background-image: radial-gradient(rgba($yellow, 0.8), rgba($yellow, 0.8)),
+    url(/src/img/background.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "logo video" "v video";
+  &__logo {
+    grid-area: logo;
+    align-self: center;
+    justify-self: center;
+    & img {
+      height: 20vh;
+    }
+  }
+  &__v {
+    grid-area: v;
+    align-self: end;
+    justify-self: center;
+    & img {
+      height: 75vh;
+    }
+  }
+  &__video {
+    grid-area: video;
+    align-self: center;
+    justify-self: center;
+    & h2 {
+      font-family: cyberpunk, sans-serif;
+      text-align: center;
+      font-size: 3rem;
+      text-shadow: 1px 1px 1px $blue;
+    }
+    & iframe {
+      border: 3px solid $blue;
+      box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.8);
+    }
+  }
+}
