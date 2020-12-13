@@ -7,6 +7,17 @@
 .nav__btn.open .nav__btn-line::after {
   transform: rotate(-135deg);
 }
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+.section {
+  transition: transform 1s, opacity 1s;
+}
+.lazy-img {
+  filter: blur(2rem);
+}
+
 .glitch {
   display: none;
   position: absolute;

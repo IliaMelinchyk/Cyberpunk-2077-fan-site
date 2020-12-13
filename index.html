@@ -13,38 +13,45 @@
     <title>Cyberpunk 2077</title>
   </head>
   <body>
-    <nav class="nav">
-      <div class="nav__btn" id="activator">
-        <div class="nav__btn-line"></div>
+    <nav>
+      <div class="nav">
+        <div class="nav__btn" id="activator">
+          <div class="nav__btn-line"></div>
+        </div>
       </div>
+      <ul class="nav__links">
+        <li>
+          <button class="nav__item">
+            <span class="nav__item-content">Main page</span>
+            <span class="glitch"></span>
+          </button>
+        </li>
+        <li>
+          <button class="nav__item">
+            <span class="nav__item-content">Main page</span>
+            <span class="glitch"></span>
+          </button>
+        </li>
+        <li>
+          <button class="nav__item">
+            <span class="nav__item-content">Main page</span>
+            <span class="glitch"></span>
+          </button>
+        </li>
+      </ul>
+      <div class="nav__background">&nbsp;</div>
     </nav>
-    <ul class="nav__links">
-      <li>
-        <button class="nav__item">
-          <span class="nav__item-content">Main page</span>
-          <span class="glitch"></span>
-        </button>
-      </li>
-      <li>
-        <button class="nav__item">
-          <span class="nav__item-content">Main page</span>
-          <span class="glitch"></span>
-        </button>
-      </li>
-      <li>
-        <button class="nav__item">
-          <span class="nav__item-content">Main page</span>
-          <span class="glitch"></span>
-        </button>
-      </li>
-    </ul>
-    <div class="nav__background">&nbsp;</div>
     <header class="header">
       <div class="header__logo">
         <img src="/src/img/logo.webp" alt="logo" />
       </div>
       <div class="header__v">
-        <img src="/src/img/v.png" alt="v" />
+        <img
+          src="/src/img/v-lazy.png"
+          data-src="/v.png"
+          alt="v"
+          class="lazy-img"
+        />
       </div>
       <div class="header__video">
         <h2>Check out latest trailer</h2>
@@ -57,5 +64,18 @@
         </iframe>
       </div>
     </header>
+    <main>
+      <section class="section about">
+        <h1>Cyberpunk 2077 is a futuristic action RPG</h1>
+        <div class="header__v">
+          <img
+            src="/src/img/v-lazy.png"
+            data-src="/v.png"
+            alt="v"
+            class="lazy-img"
+          />
+        </div>
+      </section>
+    </main>
   </body>
 </html>
