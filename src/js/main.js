@@ -38,3 +38,15 @@ const imgObserver = new IntersectionObserver(loadImg, {
   threshold: 0,
 });
 imgTargets.forEach((img) => imgObserver.observe(img));
+
+const sliderTimer = function () {
+  let counter = 1;
+  setInterval(function () {
+    document.getElementById(`radio${counter}`).checked = true;
+    counter++;
+    if (counter > 5) {
+      counter = 1;
+    }
+  }, 5000);
+};
+sliderTimer();

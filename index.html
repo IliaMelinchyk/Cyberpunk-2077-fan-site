@@ -67,13 +67,43 @@
     <main>
       <section class="section about">
         <h1>Cyberpunk 2077 is a futuristic action RPG</h1>
-        <div class="header__v">
-          <img
-            src="/src/img/v-lazy.png"
-            data-src="/v.png"
-            alt="v"
-            class="lazy-img"
-          />
+        <div class="slider">
+          <div class="slider__slides">
+            <input type="radio" name="slider__radio-btn" id="radio1" />
+            <input type="radio" name="slider__radio-btn" id="radio2" />
+            <input type="radio" name="slider__radio-btn" id="radio3" />
+            <input type="radio" name="slider__radio-btn" id="radio4" />
+            <input type="radio" name="slider__radio-btn" id="radio5" />
+            <div class="slider__slide slider__first">
+              <img src="/src/img/small-slide-1.jpg" alt="slide-1" />
+            </div>
+            <div class="slider__slide">
+              <img src="/src/img/small-slide-2.jpg" alt="slide-2" />
+            </div>
+            <div class="slider__slide">
+              <img src="/src/img/small-slide-3.jpg" alt="slide-3" />
+            </div>
+            <div class="slider__slide">
+              <img src="/src/img/small-slide-4.jpg" alt="slide-4" />
+            </div>
+            <div class="slider__slide">
+              <img src="/src/img/small-slide-5.jpg" alt="slide-5" />
+            </div>
+            <div class="slider__navigation-auto">
+              <div class="slider__auto-btn-1"></div>
+              <div class="slider__auto-btn-2"></div>
+              <div class="slider__auto-btn-3"></div>
+              <div class="slider__auto-btn-4"></div>
+              <div class="slider__auto-btn-5"></div>
+            </div>
+          </div>
+          <div class="slider__navigation-manual">
+            <label for="radio1" class="slider__manual-btn"></label>
+            <label for="radio2" class="slider__manual-btn"></label>
+            <label for="radio3" class="slider__manual-btn"></label>
+            <label for="radio4" class="slider__manual-btn"></label>
+            <label for="radio5" class="slider__manual-btn"></label>
+          </div>
         </div>
       </section>
     </main>
