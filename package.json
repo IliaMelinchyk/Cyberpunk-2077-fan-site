@@ -16,6 +16,7 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "gsap": "^3.5.1",
+    "parcel-plugin-static-files-copy": "^2.5.0",
     "regenerator-runtime": "^0.13.7"
   }
 }

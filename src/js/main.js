@@ -27,10 +27,7 @@ const imgTargets = document.querySelectorAll("img[data-src]");
 const loadImg = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
-  const imgSrc = entry.target.src;
-  console.log(imgSrc);
-  console.log(imgSrc.replace("-lazy", ""));
-  entry.target.src = entry.target.src.replace("-lazy", "");
+  entry.target.src = entry.target.dataset.src;
   entry.target.addEventListener("load", function () {
     entry.target.classList.remove("lazy-img");
   });
