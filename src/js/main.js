@@ -40,6 +40,11 @@ const imgObserver = new IntersectionObserver(loadImg, {
 imgTargets.forEach((img) => imgObserver.observe(img));
 
 const sliderChange = function () {
+  const modal = document.querySelector(".modal");
+  const modalImgCont = document.querySelector(".modal__img-container");
+  const modalOverlay = document.querySelector(".modal__overlay");
+  const btnCloseModal = document.querySelector(".modal__close");
+  const btnsOpenModal = document.querySelector(".slider__show-modal");
   let counter = 1;
   document
     .querySelector(".slider__navigation-manual")
@@ -65,5 +70,26 @@ const sliderChange = function () {
     }
     document.getElementById(`radio${counter}`).checked = true;
   }, 5000);
+  const openModal = function () {
+    modalImgCont.innerHTML = "";
+    modalImgCont.insertAdjacentHTML(
+      "afterbegin",
+      `<img src="/big-slide-${counter}.jpg" alt="">`
+    );
+    modal.classList.remove("modal__hidden");
+    modalOverlay.classList.remove("modal__hidden");
+  };
+  const closeModal = function () {
+    modal.classList.add("modal__hidden");
+    modalOverlay.classList.add("modal__hidden");
+  };
+  btnsOpenModal.addEventListener("click", openModal);
+  btnCloseModal.addEventListener("click", closeModal);
+  modalOverlay.addEventListener("click", closeModal);
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !modal.classList.contains("modal__hidden")) {
+      closeModal();
+    }
+  });
 };
 sliderChange();
