@@ -39,8 +39,15 @@ const imgObserver = new IntersectionObserver(loadImg, {
 });
 imgTargets.forEach((img) => imgObserver.observe(img));
 
-const sliderTimer = function () {
+const sliderChange = function () {
   let counter = 1;
+  document
+    .querySelector(".slider__navigation-manual")
+    .addEventListener(`click`, (e) => {
+      const btn = e.target.closest(".slider__manual-btn");
+      if (!btn) return;
+      counter = +btn.dataset.slider;
+    });
   setInterval(function () {
     document.getElementById(`radio${counter}`).checked = true;
     counter++;
@@ -49,4 +56,4 @@ const sliderTimer = function () {
     }
   }, 5000);
 };
-sliderTimer();
+sliderChange();
