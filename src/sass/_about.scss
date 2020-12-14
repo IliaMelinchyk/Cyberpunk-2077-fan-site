@@ -10,6 +10,7 @@
   height: 33.7rem;
   clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
   overflow: hidden;
+  position: relative;
   &__slides {
     width: 500%;
     height: 33.7rem;
@@ -20,7 +21,7 @@
   }
   &__slide {
     width: 20%;
-    transition: 2s;
+    transition: 1s;
     & img {
       width: 60rem;
       height: 33.7rem;
@@ -60,6 +61,70 @@
       &:not(:last-child) {
         margin-right: 2rem;
       }
+    }
+  }
+
+  &__left {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    width: 3rem;
+    height: 3rem;
+    background-color: $blue;
+    cursor: pointer;
+    clip-path: polygon(
+      40% 0%,
+      40% 20%,
+      100% 20%,
+      100% 80%,
+      40% 80%,
+      40% 100%,
+      0% 50%
+    );
+    opacity: 0.3;
+    &:hover {
+      opacity: 1;
+      transition: 1s;
+    }
+  }
+  &__right {
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    width: 3rem;
+    height: 3rem;
+    background-color: $blue;
+    cursor: pointer;
+    clip-path: polygon(
+      0% 20%,
+      60% 20%,
+      60% 0%,
+      100% 50%,
+      60% 100%,
+      60% 80%,
+      0% 80%
+    );
+    opacity: 0.3;
+    &:hover {
+      opacity: 1;
+      transition: 1s;
+    }
+  }
+  &__show-modal {
+    position: absolute;
+    top: 91%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+
+    height: 3rem;
+    fill: $blue;
+    cursor: pointer;
+    opacity: 0.3;
+    &:hover {
+      opacity: 1;
+      transition: 1s;
     }
   }
 }

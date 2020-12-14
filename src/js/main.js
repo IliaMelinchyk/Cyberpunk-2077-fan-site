@@ -48,12 +48,22 @@ const sliderChange = function () {
       if (!btn) return;
       counter = +btn.dataset.slider;
     });
-  setInterval(function () {
+  document.querySelector(".slider__left").addEventListener(`click`, () => {
+    counter--;
+    if (counter === 0) counter = 5;
     document.getElementById(`radio${counter}`).checked = true;
+  });
+  document.querySelector(".slider__right").addEventListener(`click`, () => {
+    counter++;
+    if (counter > 5) counter = 1;
+    document.getElementById(`radio${counter}`).checked = true;
+  });
+  setInterval(function () {
     counter++;
     if (counter > 5) {
       counter = 1;
     }
+    document.getElementById(`radio${counter}`).checked = true;
   }, 5000);
 };
 sliderChange();
