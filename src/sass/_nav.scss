@@ -2,14 +2,13 @@
   position: fixed;
   top: 3rem;
   right: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
   z-index: 2000;
+  &__overflow {
+    right: calc(3rem + 17px);
+  }
   &__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter;
     width: 4rem;
     height: 4rem;
     cursor: pointer;
@@ -49,6 +48,7 @@
     background-color: $black;
     z-index: 1000;
     transition: all 0.5s ease-in-out;
+    overscroll-behavior: contain;
   }
   &__background-window {
     position: fixed;
@@ -89,9 +89,7 @@
     margin: 1rem;
   }
   &__item-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCenter;
     position: absolute;
     top: 2px;
     left: 2px;

@@ -1,12 +1,12 @@
 // nav loading
-.nav__btn.open .nav__btn-line {
+.nav__btn.nav__open .nav__btn-line {
   background: transparent;
 }
-.nav__btn.open .nav__btn-line::before {
+.nav__btn.nav__open .nav__btn-line::before {
   transform: rotate(135deg);
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
 }
-.nav__btn.open .nav__btn-line::after {
+.nav__btn.nav__open .nav__btn-line::after {
   transform: rotate(-135deg);
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
 }

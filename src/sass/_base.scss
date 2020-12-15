@@ -7,6 +7,17 @@ $yellow-dark: #ece108;
 $black: #050a0e;
 $blue: #00f0ff;
 $white: #dad0c0;
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
@@ -63,4 +74,8 @@ body {
 ::selection {
   background-color: $black;
   color: $white;
+}
+.body-hidden {
+  overflow: hidden;
+  padding-right: calc(3rem + 17px);
 }

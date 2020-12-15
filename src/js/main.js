@@ -1,10 +1,13 @@
 const navBtn = document.querySelector(".nav__btn"),
   navBackground = document.querySelector(".nav__background"),
+  nav = document.querySelector(".nav"),
   navLinks = document.querySelector(".nav__links");
 navBtn.addEventListener("click", () => {
-  navBtn.classList.toggle("open");
+  navBtn.classList.toggle("nav__open");
+  nav.classList.toggle("nav__overflow");
   navBackground.classList.toggle("nav__background-window");
   navLinks.classList.toggle("nav__show");
+  document.body.classList.toggle("body-hidden");
 });
 
 const allSections = document.querySelectorAll(".section");
@@ -71,6 +74,7 @@ const sliderChange = function () {
     document.getElementById(`radio${counter}`).checked = true;
   }, 5000);
   const openModal = function () {
+    document.body.classList.add("body-hidden");
     modalImgCont.innerHTML = "";
     modalImgCont.insertAdjacentHTML(
       "afterbegin",
@@ -80,6 +84,7 @@ const sliderChange = function () {
     modalOverlay.classList.remove("modal__hidden");
   };
   const closeModal = function () {
+    document.body.classList.remove("body-hidden");
     modal.classList.add("modal__hidden");
     modalOverlay.classList.add("modal__hidden");
   };

@@ -1,9 +1,7 @@
 .about {
   background-color: $white;
   padding: 25rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
 }
 .slider {
   width: 60rem;
@@ -117,7 +115,6 @@
     top: 91%;
     left: 95%;
     transform: translate(-50%, -50%);
-
     height: 3rem;
     width: 3rem;
     fill: $blue;
@@ -130,9 +127,7 @@
   }
 }
 .modal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexCenter;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -183,4 +178,8 @@
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 4999;
   }
+}
+body.modal__overlay {
+  height: 100vh;
+  overflow-y: hidden;
 }
