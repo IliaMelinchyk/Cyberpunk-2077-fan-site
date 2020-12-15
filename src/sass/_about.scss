@@ -14,7 +14,7 @@
   position: relative;
   @include respond(1400px) {
   }
-  @include respond(500px) {
+  @include respond(31.25em) {
     width: 30rem;
     height: 16.85rem;
   }
@@ -22,7 +22,7 @@
     width: 500%;
     height: 33.7rem;
     display: flex;
-    @include respond(500px) {
+    @include respond(31.25em) {
       width: calc(30rem * 5);
       height: 16.85rem;
     }
@@ -36,7 +36,7 @@
     & img {
       width: 60rem;
       height: 33.7rem;
-      @include respond(500px) {
+      @include respond(31.25em) {
         width: 30rem;
         height: 16.85rem;
       }
@@ -48,7 +48,7 @@
     margin-top: -4rem;
     display: flex;
     justify-content: center;
-    @include respond(500px) {
+    @include respond(31.25em) {
       width: 30rem;
       margin-top: -4rem;
     }
@@ -73,12 +73,12 @@
     position: absolute;
     display: flex;
     width: 60rem;
-    @include respond(500px) {
+    @include respond(31.25em) {
       width: 30rem;
     }
     justify-content: center;
     margin-top: 29.7rem;
-    @include respond(500px) {
+    @include respond(31.25em) {
       margin-top: 12.9rem;
     }
     & div {
@@ -175,9 +175,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
-  @include respond(1200px) {
-    width: 100%;
-  }
+  margin-left: 10rem;
+  margin-right: 10rem;
   z-index: 5000;
   & img {
     width: 100%;
