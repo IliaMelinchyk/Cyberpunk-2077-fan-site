@@ -24,10 +24,15 @@ $white: #dad0c0;
   }
 }
 @mixin respondRem($breakpoint) {
-  @if $breakpoint == small-phone {
-    @media only screen and (max-width: 25em) {
+  @if $breakpoint == very-small-phone {
+    @media only screen and (max-width: 23.75em) {
       @content;
-    } //400px
+    } //380px
+  }
+  @if $breakpoint == small-phone {
+    @media only screen and (max-width: 31.25em) {
+      @content;
+    } //500px
   }
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
@@ -70,14 +75,18 @@ html {
   }
   @include respondRem(phone) {
     // width < 600?
-    font-size: 37.5%; //1 rem = 6px, 8/16 = 37.5%
+    font-size: 37.5%; //1 rem = 6px, 6/16 = 37.5%
   }
   @include respondRem(small-phone) {
     // width < 400?
-    font-size: 31.25%; //1 rem = 6px, 8/16 = 37.5%
+    font-size: 31.25%; //1 rem = 5px, 5/16 = 31.25%
   }
-  @include respondRem(big-desktop) {
-    font-size: 75%; //1rem = 12, 12/16
+  @include respondRem(very-small-phone) {
+    // width < 400?
+    font-size: 25%; //1 rem = 4px, 4/16 = 25%
+    @include respondRem(big-desktop) {
+      font-size: 75%; //1rem = 12, 12/16 = 75%
+    }
   }
 }
 body {
