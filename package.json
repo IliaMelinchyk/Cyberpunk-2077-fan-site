@@ -2,10 +2,10 @@
   "name": "cyberpunk",
   "version": "1.0.0",
   "description": "Cyberpunk 2077 fan site",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist"
+    "build": "parcel build index.html"
   },
   "author": "Ilia Melinchyk",
   "license": "ISC",
