@@ -10,29 +10,47 @@
   grid-template-rows: 1fr 2fr;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "logo video" "v video";
+  @include respond(1400px) {
+    grid-template-rows: fit-content 2fr 2fr;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "logo"
+      "video"
+      "v";
+    height: 100%;
+  }
   &__logo {
     grid-area: logo;
     align-self: center;
     justify-self: center;
     & img {
       height: 20vh;
+      @include respond(1400px) {
+        height: auto;
+        width: 90%;
+      }
     }
   }
   &__v {
     grid-area: v;
     align-self: end;
     justify-self: center;
+    position: relative;
+    top: 5px;
     & img {
       height: 75vh;
+      @include respond(600px) {
+        width: 100%;
+        height: auto;
+      }
     }
   }
   &__video {
     grid-area: video;
     align-self: center;
     justify-self: center;
-    @include respond(tab-land) {
-      display: none;
-    }
+    @include flexCenter;
+    flex-direction: column;
     & h2 {
       font-family: cyberpunk, sans-serif;
       text-align: center;
@@ -40,8 +58,18 @@
       text-shadow: 1px 1px 1px $blue;
     }
     & iframe {
+      width: 66rem;
+      height: 37.3rem;
       border: 3px solid $blue;
       box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.8);
+      @include respond(600px) {
+        width: 52rem;
+        height: 30rem;
+      }
+      @include respond(430px) {
+        width: 35rem;
+        height: 17rem;
+      }
     }
   }
 }

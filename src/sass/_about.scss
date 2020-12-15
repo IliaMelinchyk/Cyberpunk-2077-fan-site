@@ -41,7 +41,7 @@
     &:not(:last-child) {
       margin-right: 2rem;
     }
-    &:hover {
+    &:hover:focus:active {
       background: $blue;
     }
   }
@@ -81,7 +81,7 @@
       0% 50%
     );
     opacity: 0.3;
-    &:hover {
+    &:hover:focus:active {
       opacity: 1;
       transition: 1s;
     }
@@ -105,7 +105,7 @@
       0% 80%
     );
     opacity: 0.3;
-    &:hover {
+    &:hover:focus:active {
       opacity: 1;
       transition: 1s;
     }
@@ -133,6 +133,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
+  @include respond(1200px) {
+    width: 100%;
+  }
   z-index: 5000;
   & img {
     width: 100%;
@@ -161,7 +164,7 @@
     );
     z-index: 5001;
     opacity: 0.3;
-    &:hover {
+    &:hover:focus:active {
       opacity: 1;
       transition: 1s;
     }
