@@ -9,13 +9,13 @@
   }
   &__btn {
     @include flexCenter;
-    width: 4rem;
-    height: 4rem;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
   }
   &__btn-line {
-    width: 4rem;
+    width: 40px;
     height: 5px;
     background: $white;
     border-radius: 0.4rem;
@@ -26,17 +26,17 @@
       content: "";
       box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.8);
       position: absolute;
-      width: 4rem;
+      width: 40px;
       height: 5px;
       background: $white;
       border-radius: 4px;
       transition: all 0.5s ease-in-out;
     }
     &::before {
-      transform: translateY(-1.4rem);
+      transform: translateY(-14px);
     }
     &::after {
-      transform: translateY(1.4rem);
+      transform: translateY(14px);
     }
   }
   &__background {
