@@ -1,4 +1,5 @@
 .header {
+  width: 100%;
   height: 95vh;
   background-image: radial-gradient(rgba($yellow, 0.8), rgba($yellow, 0.8)),
     url(/src/img/background.jpg);
@@ -29,6 +30,9 @@
     grid-area: video;
     align-self: center;
     justify-self: center;
+    @include respond(tab-land) {
+      display: none;
+    }
     & h2 {
       font-family: cyberpunk, sans-serif;
       text-align: center;
