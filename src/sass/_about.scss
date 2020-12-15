@@ -41,7 +41,10 @@
     &:not(:last-child) {
       margin-right: 2rem;
     }
-    &:hover:focus:active {
+    &:hover {
+      background: $blue;
+    }
+    &:focus {
       background: $blue;
     }
   }
@@ -81,7 +84,11 @@
       0% 50%
     );
     opacity: 0.3;
-    &:hover:focus:active {
+    &:hover {
+      opacity: 1;
+      transition: 1s;
+    }
+    &:focus {
       opacity: 1;
       transition: 1s;
     }
@@ -105,7 +112,11 @@
       0% 80%
     );
     opacity: 0.3;
-    &:hover:focus:active {
+    &:hover {
+      opacity: 1;
+      transition: 1s;
+    }
+    &:focus {
       opacity: 1;
       transition: 1s;
     }
@@ -121,6 +132,10 @@
     cursor: pointer;
     opacity: 0.3;
     &:hover {
+      opacity: 1;
+      transition: 1s;
+    }
+    &:focus {
       opacity: 1;
       transition: 1s;
     }
@@ -164,7 +179,11 @@
     );
     z-index: 5001;
     opacity: 0.3;
-    &:hover:focus:active {
+    &:hover {
+      opacity: 1;
+      transition: 1s;
+    }
+    &:focus {
       opacity: 1;
       transition: 1s;
     }
