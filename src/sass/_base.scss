@@ -24,6 +24,11 @@ $white: #dad0c0;
   }
 }
 @mixin respondRem($breakpoint) {
+  @if $breakpoint == small-phone {
+    @media only screen and (max-width: 25em) {
+      @content;
+    } //400px
+  }
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
       @content;
@@ -54,15 +59,22 @@ $white: #dad0c0;
   box-sizing: inherit;
 }
 html {
-  // overflow-x: hidden;
   font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
   @include respondRem(tab-land) {
     // width < 1200?
-    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 56.25%
   }
   @include respondRem(tab-port) {
     // width < 900?
     font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+  @include respondRem(phone) {
+    // width < 600?
+    font-size: 37.5%; //1 rem = 6px, 8/16 = 37.5%
+  }
+  @include respondRem(small-phone) {
+    // width < 400?
+    font-size: 31.25%; //1 rem = 6px, 8/16 = 37.5%
   }
   @include respondRem(big-desktop) {
     font-size: 75%; //1rem = 12, 12/16
@@ -83,5 +95,7 @@ body {
 }
 .body-hidden {
   overflow: hidden;
-  padding-right: calc(3rem + 17px);
+  @include respondRem(tab-port) {
+    padding-right: calc(3rem + 17px);
+  }
 }

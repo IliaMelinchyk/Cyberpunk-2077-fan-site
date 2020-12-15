@@ -62,14 +62,14 @@
       height: 37.3rem;
       border: 3px solid $blue;
       box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.8);
-      @include respond(600px) {
-        width: 52rem;
-        height: 30rem;
-      }
-      @include respond(430px) {
-        width: 35rem;
-        height: 17rem;
-      }
+      // @include respond(600px) {
+      //   width: 52rem;
+      //   height: 30rem;
+      // }
+      // @include respond(430px) {
+      //   width: 35rem;
+      //   height: 17rem;
+      // }
     }
   }
 }
