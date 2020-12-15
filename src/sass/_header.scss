@@ -58,18 +58,22 @@
       text-shadow: 1px 1px 1px $blue;
     }
     & iframe {
-      width: 66rem;
-      height: 37.3rem;
+      width: 660px;
+      height: 373px;
       border: 3px solid $blue;
       box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.8);
-      // @include respond(600px) {
-      //   width: 52rem;
-      //   height: 30rem;
-      // }
-      // @include respond(430px) {
-      //   width: 35rem;
-      //   height: 17rem;
-      // }
+      @include respond(700px) {
+        width: 520px;
+        height: 300px;
+      }
+      @include respond(540px) {
+        width: 350px;
+        height: 170px;
+      }
+      @include respond(375px) {
+        width: 250px;
+        height: 130px;
+      }
     }
   }
 }
