@@ -13,3 +13,4 @@ window.addEventListener("resize", () => {
     .querySelector("header")
     .style.setProperty("--vh", `${window.innerHeight / 100}px`);
 });
+console.log(window.innerWidth);

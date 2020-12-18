@@ -15,6 +15,9 @@
     height: 100vh;
     position: absolute;
   }
+  &__background-overlfow {
+    width: calc(100% - 6rem - 16px);
+  }
 }
 .slider {
   width: 60rem;
