@@ -8,16 +8,16 @@
   &__background {
     clip-path: polygon(15% 0, 100% 0, 100% 100%, 85% 100%);
     background-color: $yellow;
-    width: calc(100% - 6rem);
+    width: calc(100% - 6rem - var(--about-overflow));
     @include respondRem(tab-port) {
-      width: 100%;
+      width: calc(100% - var(--about-overflow));
     }
     height: 100vh;
     position: absolute;
   }
-  &__background-overlfow {
-    width: calc(100% - 6rem - 16px);
-  }
+  // &__background-overlfow {
+  //   width: calc((100% - 17px) - 6rem);
+  // }
 }
 .slider {
   width: 60rem;
