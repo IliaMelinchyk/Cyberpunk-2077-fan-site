@@ -96,6 +96,9 @@
     position: absolute;
     top: 50%;
     left: 5%;
+    @include respond(600px) {
+      left: 10%;
+    }
     transform: translate(-50%, -50%);
     width: 30px;
     height: 30px;
@@ -124,6 +127,9 @@
     position: absolute;
     top: 50%;
     left: 95%;
+    @include respond(600px) {
+      left: 90%;
+    }
     transform: translate(-50%, -50%);
     width: 30px;
     height: 30px;
@@ -152,6 +158,10 @@
     position: absolute;
     top: 91%;
     left: 95%;
+    @include respond(600px) {
+      left: 90%;
+      top: 86%;
+    }
     transform: translate(-50%, -50%);
     height: 30px;
     width: 30px;
