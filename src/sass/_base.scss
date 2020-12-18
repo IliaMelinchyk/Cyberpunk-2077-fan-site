@@ -114,6 +114,7 @@ html {
   }
 }
 body {
+  overflow-x: hidden;
   box-sizing: border-box;
   padding: 3.5vh 3rem 3rem;
   position: relative;
@@ -130,3 +131,6 @@ body {
   overflow-y: hidden;
   padding-right: calc(3rem + 17px);
 }
+// .main {
+//   position: relative;
+// }

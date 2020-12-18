@@ -6,7 +6,7 @@
     url(/src/img/background.jpg);
   background-size: cover;
   background-position: top;
-  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+  clip-path: polygon(100% 0, 100% 100%, 15% 100%, 0 77.5%, 0 0);
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
@@ -52,8 +52,11 @@
     & img {
       height: 60vh;
       @include respond(1110px) {
-        height: 30vh;
+        height: 25vh;
         width: auto;
+      }
+      @include respond(540px) {
+        height: 45vh;
       }
     }
   }
@@ -62,6 +65,7 @@
     align-self: center;
     justify-self: center;
     @include flexCenter;
+    display: none;
     flex-direction: column;
 
     & h2 {
