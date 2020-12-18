@@ -8,9 +8,7 @@ import introAnimation from "./gsapAnimation";
 document
   .querySelector(".about__background")
   .style.setProperty("--about-overflow", `0px`);
-document
-  .querySelector(".about__background")
-  .style.setProperty("--about-body-padding", `6rem`);
+
 document
   .querySelector("header")
   .style.setProperty("--vh", `${window.innerHeight / 100}px`);

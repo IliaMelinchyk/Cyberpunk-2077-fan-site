@@ -43,6 +43,9 @@
       }
     }
   }
+  // &__logo-move {
+  //   justify-self: start;
+  // }
   &__v {
     grid-area: v;
     align-self: end;
@@ -127,16 +130,40 @@
       width: 20rem;
       background-image: url(/src/svg/Xbox_One_logo.svg);
       background-size: 75% auto;
+      transition: all 0.1s ease-in;
+      &:hover {
+        background-color: $blue;
+        background-size: 80% auto;
+      }
+      &:active {
+        background-size: 75% auto;
+      }
     }
     &__ps4 {
       width: 20rem;
       background-image: url(/src/svg/PlayStation_4_logo.svg);
       background-size: 75% auto;
+      transition: all 0.1s ease-in;
+      &:hover {
+        background-color: $blue;
+        background-size: 80% auto;
+      }
+      &:active {
+        background-size: 75% auto;
+      }
     }
     &__pc {
       width: 20rem;
       background-image: url(/src/svg/pc_logo.svg);
       background-size: 25% auto;
+      transition: all 0.1s ease-in;
+      &:hover {
+        background-color: $blue;
+        background-size: 27% auto;
+      }
+      &:active {
+        background-size: 25% auto;
+      }
     }
   }
 }

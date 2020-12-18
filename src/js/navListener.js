@@ -1,5 +1,4 @@
 import mobileCheck from "./mobileCheck.js";
-let bodyCheck = 6;
 let navCheck = 0;
 const navView = function () {
   document.querySelector(".nav__btn").classList.toggle("nav__open");
@@ -15,19 +14,12 @@ const navView = function () {
       .querySelector(".about__background")
       .style.setProperty("--about-overflow", `${navCheck}px`);
     document.body.classList.toggle("body-hidden");
-    bodyCheck = 6;
-    document
-      .querySelector(".about__background")
-      .style.setProperty("--about-body-padding", `${bodyCheck}rem`);
-    if (window.innerWidth < 900) {
-      document.body.classList.toggle("body-hidden-small");
-      bodyCheck = 0;
 
-      console.log(bodyCheck);
-      document
-        .querySelector(".about__background")
-        .style.setProperty("--about-body-padding", `${bodyCheck}rem`);
-    }
+    // if (window.innerWidth > 900) {
+    //   document
+    //     .querySelector(".header__logo")
+    //     .classList.toggle("header__logo-move");
+    // }
   }
 };
 const navListener = function () {

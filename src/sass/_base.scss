@@ -18,29 +18,17 @@ $white: #dad0c0;
   justify-content: center;
   align-items: center;
 }
-@mixin btnStyle {
-  border: 0;
-  outline: none;
-  background-color: $blue;
-  cursor: pointer;
-  position: relative;
-  font-family: Cyberpunk, sans-serif;
-  font-size: 2rem;
-  text-transform: uppercase;
-  color: $black;
-  text-shadow: 1px 1px 1px $blue;
-  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
-  margin: 1rem;
+@mixin btnHover {
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in;
+  }
 }
-@mixin btnContent {
-  @include flexCenter;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  right: 2px;
-  bottom: 2px;
-  background-color: $yellow;
-  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+@mixin btnPress {
+  &:active {
+    transform: scale(1);
+    transition: transform 0.1s ease-in;
+  }
 }
 @mixin respond($breakpoint) {
   @media only screen and (max-width: $breakpoint) {
@@ -130,11 +118,7 @@ body {
 .body-hidden {
   overflow-y: hidden;
   padding-right: calc(3rem + 17px);
+  @include respondRem(tab-port) {
+    padding-right: 17px;
+  }
 }
-.body-hidden-small {
-  overflow-y: hidden;
-  padding-right: 17px;
-}
-// .main {
-//   position: relative;
-// }
