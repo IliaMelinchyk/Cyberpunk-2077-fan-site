@@ -1,8 +1,10 @@
 .about {
   background: transparent;
-  height: 100vh;
+  min-height: 100vh;
   @include flexCenter;
-  @include respond(1400px) {
+  justify-content: space-around;
+  @include respond(1280px) {
+    justify-content: center;
     flex-direction: column;
   }
   &__background {
@@ -15,7 +17,7 @@
     @include respondRem(tab-port) {
       width: calc(100% - var(--about-overflow));
     }
-    height: 100vh;
+    min-height: 100vh;
     position: absolute;
   }
   &__text-shape-left {
@@ -41,10 +43,11 @@
     @include respondRem(phone) {
       height: 67rem;
     }
-    background-color: rgba(grey, 0.8);
+    background-color: rgba($red-dark, 0.8);
     font-family: Orbitron, sans-serif;
     color: $white;
-    margin: 2rem;
+    text-shadow: 1px 1px 1px $black;
+    margin: 1rem 0;
     & h3 {
       font-size: 2.3rem;
       text-transform: uppercase;
@@ -312,4 +315,46 @@
 body.modal__overlay {
   height: 100vh;
   overflow-y: hidden;
+}
+.about__timer {
+  width: 60rem;
+  & h3 {
+    text-align: center;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    font-family: Orbitron, sans-serif;
+    color: $white;
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 1px 1px $black;
+    @include respondRem(phone) {
+      font-size: 3rem;
+    }
+  }
+}
+.timer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Orbitron, sans-serif;
+  &__block {
+    clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+    position: relative;
+    z-index: 2;
+    width: 12rem;
+    height: 12rem;
+    background-color: $white;
+    font-size: 2.3rem;
+    text-align: center;
+    font-weight: 400;
+    & span {
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.4rem;
+      font-size: 5.6rem;
+      font-weight: 700;
+    }
+  }
 }

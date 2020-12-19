@@ -1,14 +1,13 @@
 import mobileCheck from "./mobileCheck.js";
 
-const slider = document.querySelector(".slider");
-const modal = document.querySelector(".modal");
-const modalImgCont = document.querySelector(".modal__img-container");
-const modalOverlay = document.querySelector(".modal__overlay");
-const btnCloseModal = document.querySelector(".modal__close");
-const btnsOpenModal = document.querySelector(".slider__show-modal");
-const btnManual = document.querySelector(".slider__navigation-manual");
-const btnLeft = document.querySelector(".slider__left");
-const btnRight = document.querySelector(".slider__right");
+const modal = document.querySelector(".modal"),
+  modalImgCont = document.querySelector(".modal__img-container"),
+  modalOverlay = document.querySelector(".modal__overlay"),
+  btnCloseModal = document.querySelector(".modal__close"),
+  btnsOpenModal = document.querySelector(".slider__show-modal"),
+  btnManual = document.querySelector(".slider__navigation-manual"),
+  btnLeft = document.querySelector(".slider__left"),
+  btnRight = document.querySelector(".slider__right");
 const sliderChange = function () {
   let counter = 1;
   setInterval(function () {
