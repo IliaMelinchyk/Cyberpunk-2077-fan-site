@@ -25,4 +25,13 @@ const navView = function () {
 const navListener = function () {
   document.querySelector(".nav__btn").addEventListener("click", navView);
 };
-export default navListener();
+const navMove = function (btn, section) {
+  document.querySelector(btn).addEventListener("click", function () {
+    navView();
+    setTimeout(
+      document.querySelector(section).scrollIntoView({ behavior: "smooth" }),
+      100
+    );
+  });
+};
+export { navListener, navMove };
