@@ -38,9 +38,9 @@
     z-index: 2;
     width: 60rem;
     height: 40rem;
-    // @include respondRem(phone) {
-    //   height: 67rem;
-    // }
+    @include respondRem(phone) {
+      height: 67rem;
+    }
     background-color: rgba(grey, 0.8);
     font-family: Orbitron, sans-serif;
     color: $white;
