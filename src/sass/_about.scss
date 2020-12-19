@@ -3,17 +3,63 @@
   height: 100vh;
   @include flexCenter;
   @include respond(1400px) {
-    // flex-direction: column;
+    flex-direction: column;
   }
   &__background {
     clip-path: polygon(15% 0, 100% 0, 100% 100%, 85% 100%);
-    background-color: $yellow;
+    background-image: radial-gradient(rgba($yellow, 0.8), rgba($yellow, 0.8)),
+      url(/src/img/background.jpg);
+    background-size: cover;
+    background-position: top;
     width: calc(100% - 6rem - var(--about-overflow));
     @include respondRem(tab-port) {
       width: calc(100% - var(--about-overflow));
     }
     height: 100vh;
     position: absolute;
+  }
+  &__text-shape-left {
+    width: 5rem;
+    height: 100%;
+    float: left;
+    shape-outside: polygon(0 0, 0 75%, 100% 100%, 0% 100%);
+  }
+  &__text-shape-right {
+    width: 5rem;
+    height: 100%;
+    float: right;
+    shape-outside: polygon(0 0, 100% 0, 100% 25%, 0 0);
+  }
+  &__text-area {
+    text-overflow: clip;
+    position: relative;
+    clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+    justify-self: start;
+    z-index: 2;
+    width: 60rem;
+    height: 40rem;
+    // @include respondRem(phone) {
+    //   height: 67rem;
+    // }
+    background-color: rgba(grey, 0.8);
+    font-family: Orbitron, sans-serif;
+    color: $white;
+    margin: 2rem;
+    & h3 {
+      font-size: 2.3rem;
+      text-transform: uppercase;
+      margin: 0.3rem;
+      @include respondRem(phone) {
+        font-size: 3rem;
+      }
+    }
+    & p {
+      font-size: 1.5rem;
+      margin: 0.3rem;
+      @include respondRem(phone) {
+        font-size: 2rem;
+      }
+    }
   }
 }
 .slider {
