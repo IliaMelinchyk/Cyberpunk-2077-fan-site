@@ -28,9 +28,6 @@
     &:focus &-line::after {
       transform: translateY(10px);
     }
-    // &:hover &-line {
-    //   transform: translateY(14px);
-    // }
   }
   &__btn-line {
     width: 40px;

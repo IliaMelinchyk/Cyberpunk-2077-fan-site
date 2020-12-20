@@ -1,11 +1,10 @@
 .paths {
   width: 100%;
   min-height: 76.5vh;
-  // 20vh для футера
+  @include respondRem(tab-port) {
+    min-height: 80vh;
+  }
   background: transparent;
-  // @include flexCenter;
-  // justify-content: space-around;
-  // flex-wrap: wrap;
   &__background {
     box-sizing: border-box;
     border-top: 2vh solid $black;
@@ -47,11 +46,12 @@
     shape-outside: polygon(0 0, 0 75%, 100% 100%, 0% 100%);
   }
   &__side {
-    color: $black;
+    color: $white;
+    text-shadow: 1px 1px 1px $black;
     font-family: Orbitron, sans-serif;
     width: 35rem;
     height: 50rem;
-    transition: all 0.8s ease;
+    transition: transform 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -79,7 +79,6 @@
       }
     }
     &-back {
-      background-color: $yellow;
       clip-path: polygon(100% 0, 100% 75%, 92% 100%, 0 100%, 0 25%, 8% 0);
       transform: rotateY(180deg);
       & img {
@@ -88,15 +87,11 @@
       }
     }
   }
-  &:hover &__side-front {
-    transform: rotateY(-180deg);
-  }
-  &:hover &__side-back {
-    transform: rotateY(0);
-  }
+  &:hover &__side-front,
   &:focus &__side-front {
     transform: rotateY(-180deg);
   }
+  &:hover &__side-back,
   &:focus &__side-back {
     transform: rotateY(0);
   }

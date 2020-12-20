@@ -1,5 +1,5 @@
 .footer {
-  min-height: 15vh;
+  min-height: 20vh;
   width: 100%;
   background-color: $yellow;
   @include flexCenter;
@@ -17,7 +17,6 @@
     list-style: none;
   }
   &__my-links {
-    // width: 50%;
     display: flex;
     flex-direction: column;
     list-style: none;

@@ -13,8 +13,3 @@ const introAnimation = function () {
   tl.to(".intro", 0, { display: "none" });
 };
 export default introAnimation();
-
-// const sectionAnimation = function(){
-//   const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-//   tl.to(".section--hidden")
-// }

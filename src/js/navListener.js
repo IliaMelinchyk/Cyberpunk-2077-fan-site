@@ -17,12 +17,6 @@ const navView = function () {
       .querySelector(".paths__background")
       .style.setProperty("--paths-overflow", `${navCheck}px`);
     document.body.classList.toggle("body-hidden");
-
-    // if (window.innerWidth > 900) {
-    //   document
-    //     .querySelector(".header__logo")
-    //     .classList.toggle("header__logo-move");
-    // }
   }
 };
 const navListener = function () {
