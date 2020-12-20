@@ -1,0 +1,103 @@
+.paths {
+  width: 100%;
+  min-height: 76.5vh;
+  // 20vh для футера
+  background: transparent;
+  // @include flexCenter;
+  // justify-content: space-around;
+  // flex-wrap: wrap;
+  &__background {
+    box-sizing: border-box;
+    border-top: 2vh solid $black;
+    clip-path: polygon(85% 0, 100% 0, 100% 100%, 100% 22.5%);
+    background-image: radial-gradient(rgba($yellow, 0.8), rgba($yellow, 0.8));
+    background-size: cover;
+    background-position: top;
+    width: calc(100% - 6rem - var(--paths-overflow));
+    @include respondRem(tab-port) {
+      width: calc(100% - var(--paths-overflow));
+    }
+    min-height: 100vh;
+    position: absolute;
+  }
+  & h2 {
+    font-family: Cyberpunk, sans-serif;
+    text-align: center;
+    color: $yellow;
+    text-shadow: 1px 1px 1px $blue;
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
+}
+.cards {
+  @include flexCenter;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 50rem;
+  width: 35rem;
+  margin: 2rem 1rem;
+  &__text-shape-left {
+    width: 3rem;
+    height: 100%;
+    float: left;
+    shape-outside: polygon(0 0, 0 75%, 100% 100%, 0% 100%);
+  }
+  &__side {
+    color: $black;
+    font-family: Orbitron, sans-serif;
+    width: 35rem;
+    height: 50rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    &-front {
+      background-color: $red-dark;
+      clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+      & img {
+        height: 31rem;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      }
+      & h4 {
+        margin-right: 0.5rem;
+        font-weight: 700;
+        font-size: 3rem;
+        float: right;
+        position: relative;
+        bottom: 3rem;
+        shape-outside: polygon(0 0);
+      }
+      & p {
+        margin: 0.5rem;
+        font-weight: 500;
+        font-size: 1.7rem;
+      }
+    }
+    &-back {
+      background-color: $yellow;
+      clip-path: polygon(100% 0, 100% 75%, 92% 100%, 0 100%, 0 25%, 8% 0);
+      transform: rotateY(180deg);
+      & img {
+        width: 35rem;
+        height: 50rem;
+      }
+    }
+  }
+  &:hover &__side-front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side-back {
+    transform: rotateY(0);
+  }
+  &:focus &__side-front {
+    transform: rotateY(-180deg);
+  }
+  &:focus &__side-back {
+    transform: rotateY(0);
+  }
+}

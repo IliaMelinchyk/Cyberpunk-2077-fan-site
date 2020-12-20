@@ -13,6 +13,9 @@ const navView = function () {
     document
       .querySelector(".about__background")
       .style.setProperty("--about-overflow", `${navCheck}px`);
+    document
+      .querySelector(".paths__background")
+      .style.setProperty("--paths-overflow", `${navCheck}px`);
     document.body.classList.toggle("body-hidden");
 
     // if (window.innerWidth > 900) {
@@ -28,10 +31,7 @@ const navListener = function () {
 const navMove = function (btn, section) {
   document.querySelector(btn).addEventListener("click", function () {
     navView();
-    setTimeout(
-      document.querySelector(section).scrollIntoView({ behavior: "smooth" }),
-      100
-    );
+    document.querySelector(section).scrollIntoView({ behavior: "smooth" });
   });
 };
 export { navListener, navMove };

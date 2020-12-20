@@ -1,0 +1,45 @@
+.footer {
+  min-height: 15vh;
+  width: 100%;
+  background-color: $yellow;
+  @include flexCenter;
+  justify-content: space-around;
+  font-size: 2.6rem;
+  font-family: Orbitron, sans-serif;
+  font-weight: 600;
+  &__dev-container {
+    text-align: center;
+  }
+  &__dev-links {
+    text-align: center;
+    @include flexCenter;
+    justify-content: space-around;
+    list-style: none;
+  }
+  &__my-links {
+    // width: 50%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    & li {
+      display: flex;
+      align-items: center;
+    }
+  }
+  & svg {
+    fill: $black;
+    height: 7rem;
+    width: 7rem;
+  }
+  & a {
+    text-decoration: none;
+    color: $black;
+    &:hover,
+    &:focus {
+      color: $blue;
+      & svg {
+        fill: $blue;
+      }
+    }
+  }
+}

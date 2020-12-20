@@ -14,9 +14,23 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    @include btnHover;
+    transition: translate 0.5s ease-in-out;
     @include btnPress;
+    &:hover &-line::before {
+      transform: translateY(-10px);
+    }
+    &:hover &-line::after {
+      transform: translateY(10px);
+    }
+    &:focus &-line::before {
+      transform: translateY(-10px);
+    }
+    &:focus &-line::after {
+      transform: translateY(10px);
+    }
+    // &:hover &-line {
+    //   transform: translateY(14px);
+    // }
   }
   &__btn-line {
     width: 40px;

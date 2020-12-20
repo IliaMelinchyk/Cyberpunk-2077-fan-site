@@ -3,7 +3,7 @@
   src: url(/src/fonts/Cyberpunk.ttf);
 }
 $yellow: #fcee09;
-$yellow-dark: #ece108;
+$red: #ff003c;
 $red-dark: #7c011e;
 $black: #050a0e;
 $blue: #00f0ff;
@@ -22,13 +22,13 @@ $white: #dad0c0;
 @mixin btnHover {
   &:hover {
     transform: scale(1.05);
-    transition: transform 0.3s ease-in;
+    // transition: transform 0.3s ease-in;
   }
 }
 @mixin btnPress {
   &:active {
-    transform: scale(1);
-    transition: transform 0.1s ease-in;
+    transform: scale(0.9);
+    // transition: transform 0.1s ease-in;
   }
 }
 @mixin respond($breakpoint) {

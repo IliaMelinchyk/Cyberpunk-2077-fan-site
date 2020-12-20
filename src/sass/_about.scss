@@ -3,14 +3,16 @@
   min-height: 100vh;
   @include flexCenter;
   justify-content: space-around;
-  @include respond(1280px) {
+  @include respond(1200px) {
     justify-content: center;
     flex-direction: column;
   }
   &__background {
+    box-sizing: border-box;
+    border-top: 2vh solid $black;
     clip-path: polygon(15% 0, 100% 0, 100% 100%, 85% 100%);
     background-image: radial-gradient(rgba($yellow, 0.8), rgba($yellow, 0.8)),
-      url(/src/img/background.jpg);
+      url(/src/img/background-2.jpg);
     background-size: cover;
     background-position: top;
     width: calc(100% - 6rem - var(--about-overflow));
@@ -40,6 +42,12 @@
     z-index: 2;
     width: 60rem;
     height: 40rem;
+    @include respond(1280px) {
+      height: 44rem;
+    }
+    @include respond(1200px) {
+      height: 40rem;
+    }
     @include respondRem(phone) {
       height: 67rem;
     }
@@ -47,7 +55,7 @@
     font-family: Orbitron, sans-serif;
     color: $white;
     text-shadow: 1px 1px 1px $black;
-    margin: 1rem 0;
+    margin: 2rem 0 1rem;
     & h3 {
       font-size: 2.3rem;
       text-transform: uppercase;
@@ -66,6 +74,9 @@
   }
 }
 .slider {
+  //
+  // display: none;
+  //
   width: 60rem;
   height: 33.7rem;
   clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
