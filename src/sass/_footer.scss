@@ -1,5 +1,6 @@
 .footer {
   min-height: 20vh;
+  height: calc(100 * var(--vh));
   width: 100%;
   background-color: $yellow;
   @include flexCenter;

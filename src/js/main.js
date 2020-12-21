@@ -36,8 +36,8 @@ const init = () => {
 
   aboutWindow(".about__background", ".about");
 
-  mobileWindow("header");
-  mobileWindow(".about");
-  mobileWindow(".paths");
+  mobileWindow("footer");
+  // mobileWindow(".about");
+  // mobileWindow(".paths");
 };
 init();

@@ -156,7 +156,6 @@ body {
 .header {
   width: 100%;
   min-height: 96.5vh;
-  min-height: calc(96.5 * var(--vh));
   background-image: radial-gradient(rgba(252, 238, 9, 0.8), rgba(252, 238, 9, 0.8)), url(/src/img/background-1.jpg);
   background-size: cover;
   background-position: top;
@@ -174,7 +173,6 @@ body {
 @media only screen and (max-width: 56.25em) {
   .header {
     min-height: 100vh;
-    min-height: calc(100 * var(--vh));
   }
 }
 
@@ -666,7 +664,6 @@ body {
   min-height: 100vh;
   height: var(--vh);
   position: absolute;
-  z-index: 1;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -757,7 +754,6 @@ body {
           clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
   overflow: hidden;
   position: relative;
-  z-index: 2;
 }
 
 .slider__slides {
@@ -1092,7 +1088,6 @@ body.modal__overlay {
   width: calc(100% - 6rem - var(--paths-overflow));
   min-height: 100vh;
   position: absolute;
-  z-index: 0;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -1108,8 +1103,6 @@ body.modal__overlay {
   text-shadow: 1px 1px 1px #00f0ff;
   font-size: 3rem;
   margin-top: 2rem;
-  position: relative;
-  z-index: 5;
 }
 
 .cards {
@@ -1132,7 +1125,6 @@ body.modal__overlay {
   -webkit-perspective: 150rem;
           perspective: 150rem;
   position: relative;
-  z-index: 2;
   height: 50rem;
   width: 35rem;
   margin: 2rem 1rem;
@@ -1216,6 +1208,7 @@ body.modal__overlay {
 
 .footer {
   min-height: 20vh;
+  height: calc(100 * var(--vh));
   width: 100%;
   background-color: #fcee09;
   display: -webkit-box;

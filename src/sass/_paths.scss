@@ -22,7 +22,6 @@
     }
     min-height: 100vh;
     position: absolute;
-    z-index: 0;
   }
   & h2 {
     font-family: Cyberpunk, sans-serif;
@@ -31,8 +30,6 @@
     text-shadow: 1px 1px 1px $blue;
     font-size: 3rem;
     margin-top: 2rem;
-    position: relative;
-    z-index: 5;
   }
 }
 .cards {
@@ -43,7 +40,6 @@
 .card {
   perspective: 150rem;
   position: relative;
-  z-index: 2;
   height: 50rem;
   width: 35rem;
   margin: 2rem 1rem;

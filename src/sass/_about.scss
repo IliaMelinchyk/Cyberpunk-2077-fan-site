@@ -25,7 +25,6 @@
     min-height: 100vh;
     height: var(--vh);
     position: absolute;
-    z-index: 1;
   }
   &__text-shape-left {
     width: 5rem;
@@ -86,7 +85,6 @@
   clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
   overflow: hidden;
   position: relative;
-  z-index: 2;
   @include respond(1400px) {
   }
   &__slides {
