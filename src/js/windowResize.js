@@ -7,7 +7,7 @@ const aboutWindow = (selector, reference) => {
         `${document.querySelector(reference).getBoundingClientRect().height}px`
       );
   };
-  changeSize();
+  document.addEventListener("DOMContentLoaded", changeSize);
   window.addEventListener("resize", changeSize);
   document.onfullscreenchange = changeSize();
 };
