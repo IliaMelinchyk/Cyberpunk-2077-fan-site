@@ -1,7 +1,7 @@
 import mobileCheck from "./mobileCheck.js";
 // Функции вызова и работы навигации
 let navCheck = 0;
-const navView = function () {
+const navView = () => {
   document.querySelector(".nav__btn").classList.toggle("nav__open");
   document
     .querySelector(".nav__background")
@@ -20,11 +20,11 @@ const navView = function () {
     document.body.classList.toggle("body-hidden");
   }
 };
-const navListener = function () {
+const navListener = () => {
   document.querySelector(".nav__btn").addEventListener("click", navView);
 };
-const navMove = function (btn, section) {
-  document.querySelector(btn).addEventListener("click", function () {
+const navMove = (btn, section) => {
+  document.querySelector(btn).addEventListener("click", () => {
     navView();
     document.querySelector(section).scrollIntoView({ behavior: "smooth" });
   });

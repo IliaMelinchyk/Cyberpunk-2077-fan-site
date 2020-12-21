@@ -1,8 +1,8 @@
 .header {
   width: 100%;
-  min-height: 96.5vh;
+  min-height: 100vh;
   // Фикс высоты для телефонов с меню внизу экрана
-  min-height: calc(96.5 * var(--vh));
+  min-height: calc(100 * var(--vh));
   background-image: radial-gradient(rgba($yellow, 0.8), rgba($yellow, 0.8)),
     url(/src/img/background-1.jpg);
   background-size: cover;
