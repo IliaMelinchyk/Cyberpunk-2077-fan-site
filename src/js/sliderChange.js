@@ -73,4 +73,4 @@ const sliderChange = function () {
   });
 };
 
-export default sliderChange();
+export default sliderChange;

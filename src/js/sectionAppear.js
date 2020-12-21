@@ -15,4 +15,4 @@ const sectionAppear = function () {
     section.classList.add("section--hidden");
   });
 };
-export default sectionAppear();
+export default sectionAppear;

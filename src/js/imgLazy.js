@@ -17,4 +17,4 @@ const imgLazy = function () {
     .querySelectorAll("img[data-src]")
     .forEach((img) => imgObserver.observe(img));
 };
-export default imgLazy();
+export default imgLazy;

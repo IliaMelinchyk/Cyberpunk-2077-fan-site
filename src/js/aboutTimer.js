@@ -1,6 +1,6 @@
 // Функции таймера отсчета
 const release = "2020-12-10";
-const getTime = function (release) {
+const getTime = (release) => {
   const t = Date.parse(new Date()) - Date.parse(release),
     days = Math.floor(t / (1000 * 60 * 60 * 25)),
     hours = Math.floor((t / (1000 * 60 * 60)) % 24),
@@ -14,20 +14,20 @@ const getTime = function (release) {
     seconds: seconds,
   };
 };
-const getZero = function (num) {
+const getZero = (num) => {
   if (num >= 0 && num < 10) {
     return `0${num}`;
   } else {
     return num;
   }
 };
-const setClock = function (release) {
+const setClock = (release) => {
   const timer = document.querySelector(".timer"),
     days = timer.querySelector(`#days`),
     hours = timer.querySelector(`#hours`),
     minutes = timer.querySelector(`#minutes`),
     seconds = timer.querySelector(`#seconds`);
-  const updateClock = function () {
+  const updateClock = () => {
     const t = getTime(release);
     days.innerHTML = getZero(t.days);
     hours.innerHTML = getZero(t.hours);
@@ -40,4 +40,4 @@ const setClock = function (release) {
   updateClock();
   setInterval(updateClock, 1000);
 };
-export default setClock(release);
+export { release, setClock };

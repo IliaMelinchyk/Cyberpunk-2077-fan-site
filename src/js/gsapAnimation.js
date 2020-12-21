@@ -13,4 +13,4 @@ const introAnimation = function () {
   tl.fromTo(".header__logo", { y: "-150%" }, { y: "0%", duration: 1 }, "-=0.9");
   tl.to(".intro", 0, { display: "none" });
 };
-export default introAnimation();
+export default introAnimation;

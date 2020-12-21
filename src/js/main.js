@@ -3,7 +3,7 @@ import sectionAppear from "./sectionAppear";
 import imgLazy from "./imgLazy";
 import sliderChange from "./sliderChange";
 import introAnimation from "./gsapAnimation";
-import serClock from "./aboutTimer";
+import { release, setClock } from "./aboutTimer";
 // Полифилинг
 import "core-js/stable";
 import "regenerator-runtime/runtime";
@@ -20,7 +20,7 @@ const init = () => {
   imgLazy();
   sliderChange();
   introAnimation();
-  serClock();
+  setClock(release);
   document
     .querySelector(".about__background")
     .style.setProperty("--about-overflow", `0px`);
