@@ -1,6 +1,6 @@
 import gsap from "gsap";
 // Последовательность и действия анимации интро
-const introAnimation = function () {
+const introAnimation = () => {
   const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
   tl.to("body", 0, { className: "body-hidden" });
   tl.to(".intro__text", { y: "0%", duration: 1, stagger: 0.3 });

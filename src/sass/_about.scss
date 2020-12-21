@@ -22,7 +22,7 @@
     @include respondRem(tab-port) {
       width: calc(100% - var(--about-overflow));
     }
-    min-height: 100vh;
+    height: var(--vh);
     position: absolute;
   }
   &__text-shape-left {

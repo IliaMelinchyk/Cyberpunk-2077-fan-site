@@ -27,6 +27,25 @@ const init = () => {
   document
     .querySelector(".paths__background")
     .style.setProperty("--paths-overflow", `0px`);
+  const aboutWindow = (selector, reference) => {
+    document
+      .querySelector(selector)
+      .style.setProperty(
+        "--vh",
+        `${document.querySelector(reference).getBoundingClientRect().height}px`
+      );
+    window.addEventListener("resize", () => {
+      document
+        .querySelector(selector)
+        .style.setProperty(
+          "--vh",
+          `${
+            document.querySelector(reference).getBoundingClientRect().height
+          }px`
+        );
+    });
+  };
+  aboutWindow(".about__background", ".about");
   const mobileWindow = (selector) => {
     document
       .querySelector(selector)

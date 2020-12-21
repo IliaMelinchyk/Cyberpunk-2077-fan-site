@@ -1,5 +1,5 @@
 // Двигает секцию вверх при приближении к ней
-const sectionReveal = function (entries, observer) {
+const sectionReveal = (entries, observer) => {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
   entry.target.classList.remove("section--hidden");
@@ -7,10 +7,10 @@ const sectionReveal = function (entries, observer) {
 };
 const sectionObserver = new IntersectionObserver(sectionReveal, {
   root: null,
-  threshold: 0.15,
+  threshold: 0.2,
 });
-const sectionAppear = function () {
-  document.querySelectorAll(".section").forEach(function (section) {
+const sectionAppear = () => {
+  document.querySelectorAll(".section").forEach((section) => {
     sectionObserver.observe(section);
     section.classList.add("section--hidden");
   });

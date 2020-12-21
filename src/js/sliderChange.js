@@ -1,23 +1,23 @@
 import mobileCheck from "./mobileCheck.js";
 // Функции слайдера
-const sliderChange = function () {
-  const modal = document.querySelector(".modal"),
-    modalImgCont = document.querySelector(".modal__img-container"),
-    modalOverlay = document.querySelector(".modal__overlay"),
-    btnCloseModal = document.querySelector(".modal__close"),
-    btnsOpenModal = document.querySelector(".slider__show-modal"),
-    btnManual = document.querySelector(".slider__navigation-manual"),
-    btnLeft = document.querySelector(".slider__left"),
-    btnRight = document.querySelector(".slider__right");
+const sliderChange = () => {
+  const modal = document.querySelector(".modal");
+  const modalImgCont = document.querySelector(".modal__img-container");
+  const modalOverlay = document.querySelector(".modal__overlay");
+  const btnCloseModal = document.querySelector(".modal__close");
+  const btnsOpenModal = document.querySelector(".slider__show-modal");
+  const btnManual = document.querySelector(".slider__navigation-manual");
+  const btnLeft = document.querySelector(".slider__left");
+  const btnRight = document.querySelector(".slider__right");
   let counter = 1;
-  setInterval(function () {
+  setInterval(() => {
     counter++;
     if (counter > 5) {
       counter = 1;
     }
     document.getElementById(`radio${counter}`).checked = true;
   }, 5000);
-  const openModal = function () {
+  const openModal = () => {
     if (!mobileCheck()) {
       document.body.classList.add("body-hidden");
       document.querySelector(".nav").classList.add("nav__overflow");
@@ -30,7 +30,7 @@ const sliderChange = function () {
     modal.classList.remove("modal__hidden");
     modalOverlay.classList.remove("modal__hidden");
   };
-  const closeModal = function () {
+  const closeModal = () => {
     if (!mobileCheck()) {
       document.body.classList.remove("body-hidden");
       document.querySelector(".nav").classList.remove("nav__overflow");
@@ -56,7 +56,7 @@ const sliderChange = function () {
   btnsOpenModal.addEventListener("click", openModal);
   btnCloseModal.addEventListener("click", closeModal);
   modalOverlay.addEventListener("click", closeModal);
-  document.addEventListener("keydown", function (e) {
+  document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !modal.classList.contains("modal__hidden")) {
       closeModal();
     }

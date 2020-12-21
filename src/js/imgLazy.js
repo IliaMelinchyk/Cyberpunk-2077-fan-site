@@ -1,5 +1,5 @@
 // Загрузка изображений плохого качества перед изображениями хорошего
-const loadImg = function (entries, observer) {
+const loadImg = (entries, observer) => {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
   entry.target.src = entry.target.dataset.src;
@@ -12,7 +12,7 @@ const imgObserver = new IntersectionObserver(loadImg, {
   root: null,
   threshold: 0.1,
 });
-const imgLazy = function () {
+const imgLazy = () => {
   document
     .querySelectorAll("img[data-src]")
     .forEach((img) => imgObserver.observe(img));
