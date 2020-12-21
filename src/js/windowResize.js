@@ -1,24 +1,15 @@
 const aboutWindow = (selector, reference) => {
-  document
-    .querySelector(selector)
-    .style.setProperty(
-      "--vh",
-      `${document.querySelector(reference).getBoundingClientRect().height}px`
-    );
-  window.addEventListener("resize", () => {
+  const changeSize = () => {
     document
       .querySelector(selector)
       .style.setProperty(
         "--vh",
         `${document.querySelector(reference).getBoundingClientRect().height}px`
       );
-  });
-  document.onfullscreenchange
-    .querySelector(selector)
-    .style.setProperty(
-      "--vh",
-      `${document.querySelector(reference).getBoundingClientRect().height}px`
-    );
+  };
+  changeSize();
+  window.addEventListener("resize", changeSize);
+  document.onfullscreenchange = changeSize();
 };
 const mobileWindow = (selector) => {
   document
