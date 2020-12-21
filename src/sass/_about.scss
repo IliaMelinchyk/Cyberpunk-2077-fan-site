@@ -2,7 +2,7 @@
   background: transparent;
   min-height: 100vh;
   // Фикс высоты для телефонов с меню внизу экрана
-  height: calc(100 * var(--vh));
+  // height: calc(100 * var(--vh));
   @include flexCenter;
   justify-content: space-around;
   @include respond(1200px) {
