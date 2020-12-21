@@ -136,7 +136,7 @@
       background-image: url(/src/svg/Xbox_One_logo.svg);
       background-size: 75% auto;
       @include respondRem(small-phone) {
-        width: 15rem;
+        width: 12rem;
       }
       border-left: 2px solid $black;
       &:hover,
@@ -153,7 +153,7 @@
       background-image: url(/src/svg/PlayStation_4_logo.svg);
       background-size: 75% auto;
       @include respondRem(small-phone) {
-        width: 15rem;
+        width: 12rem;
       }
       &:hover,
       &:focus {
@@ -169,7 +169,7 @@
       background-image: url(/src/svg/pc_logo.svg);
       background-size: 25% auto;
       @include respondRem(small-phone) {
-        width: 15rem;
+        width: 12rem;
       }
       &:hover,
       &:focus {

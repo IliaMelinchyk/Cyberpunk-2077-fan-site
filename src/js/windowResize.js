@@ -9,7 +9,12 @@ const aboutWindow = (selector, reference) => {
   };
   document.addEventListener("DOMContentLoaded", sizeChange);
   window.addEventListener("resize", sizeChange);
-  document.onfullscreenchange = sizeChange();
+  document.onfullscreenchange
+    .querySelector(selector)
+    .style.setProperty(
+      "--vh",
+      `${document.querySelector(reference).getBoundingClientRect().height}px`
+    );
 };
 const mobileWindow = (selector) => {
   const mobileChange = () => {
