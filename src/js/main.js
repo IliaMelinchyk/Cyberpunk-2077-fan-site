@@ -4,6 +4,7 @@ import imgLazy from "./imgLazy";
 import sliderChange from "./sliderChange";
 import introAnimation from "./gsapAnimation";
 import { release, setClock } from "./aboutTimer";
+import { aboutWindow, mobileWindow } from "./windowResize";
 // Полифилинг
 import "core-js/stable";
 import "regenerator-runtime/runtime";
@@ -27,35 +28,9 @@ const init = () => {
   document
     .querySelector(".paths__background")
     .style.setProperty("--paths-overflow", `0px`);
-  const aboutWindow = (selector, reference) => {
-    document
-      .querySelector(selector)
-      .style.setProperty(
-        "--vh",
-        `${document.querySelector(reference).getBoundingClientRect().height}px`
-      );
-    window.addEventListener("resize", () => {
-      document
-        .querySelector(selector)
-        .style.setProperty(
-          "--vh",
-          `${
-            document.querySelector(reference).getBoundingClientRect().height
-          }px`
-        );
-    });
-  };
+
   aboutWindow(".about__background", ".about");
-  const mobileWindow = (selector) => {
-    document
-      .querySelector(selector)
-      .style.setProperty("--vh", `${window.innerHeight / 100}px`);
-    window.addEventListener("resize", () => {
-      document
-        .querySelector(selector)
-        .style.setProperty("--vh", `${window.innerHeight / 100}px`);
-    });
-  };
+
   mobileWindow("header");
   mobileWindow(".about");
   mobileWindow(".paths");
