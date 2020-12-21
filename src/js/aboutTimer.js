@@ -1,3 +1,4 @@
+// Функции таймера отсчета
 const release = "2020-12-10";
 const getTime = function (release) {
   const t = Date.parse(new Date()) - Date.parse(release),

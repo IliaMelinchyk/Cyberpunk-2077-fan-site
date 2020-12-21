@@ -5,10 +5,10 @@ import sliderChange from "./sliderChange";
 import mobileCheck from "./mobileCheck.js";
 import introAnimation from "./gsapAnimation";
 import serClock from "./aboutTimer";
-
+// Полифилинг
 import "core-js/stable";
 import "regenerator-runtime/runtime";
-
+// Активируется при загрузке страницы
 const init = function () {
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
@@ -23,29 +23,18 @@ const init = function () {
   document
     .querySelector(".paths__background")
     .style.setProperty("--paths-overflow", `0px`);
-  document
-    .querySelector("header")
-    .style.setProperty("--vh", `${window.innerHeight / 100}px`);
-  window.addEventListener("resize", () => {
+  const mobileWindow = function (selector) {
     document
-      .querySelector("header")
+      .querySelector(selector)
       .style.setProperty("--vh", `${window.innerHeight / 100}px`);
-  });
-  document
-    .querySelector(".about")
-    .style.setProperty("--vh", `${window.innerHeight / 100}px`);
-  window.addEventListener("resize", () => {
-    document
-      .querySelector(".about")
-      .style.setProperty("--vh", `${window.innerHeight / 100}px`);
-  });
-  document
-    .querySelector(".paths")
-    .style.setProperty("--vh", `${window.innerHeight / 100}px`);
-  window.addEventListener("resize", () => {
-    document
-      .querySelector(".paths")
-      .style.setProperty("--vh", `${window.innerHeight / 100}px`);
-  });
+    window.addEventListener("resize", () => {
+      document
+        .querySelector(selector)
+        .style.setProperty("--vh", `${window.innerHeight / 100}px`);
+    });
+  };
+  mobileWindow("header");
+  mobileWindow(".about");
+  mobileWindow(".paths");
 };
 init();

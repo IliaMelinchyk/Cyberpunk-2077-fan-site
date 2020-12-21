@@ -1,3 +1,4 @@
+// Двигает секцию вверх при приближении к ней
 const sectionReveal = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;

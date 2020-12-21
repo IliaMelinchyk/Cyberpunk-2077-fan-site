@@ -1,4 +1,5 @@
 import mobileCheck from "./mobileCheck.js";
+// Функции вызова и работы навигации
 let navCheck = 0;
 const navView = function () {
   document.querySelector(".nav__btn").classList.toggle("nav__open");

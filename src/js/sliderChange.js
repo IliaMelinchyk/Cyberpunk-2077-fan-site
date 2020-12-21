@@ -1,5 +1,5 @@
 import mobileCheck from "./mobileCheck.js";
-
+// Функции слайдера
 const sliderChange = function () {
   const modal = document.querySelector(".modal"),
     modalImgCont = document.querySelector(".modal__img-container"),
