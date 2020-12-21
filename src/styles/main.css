@@ -666,6 +666,7 @@ body {
   min-height: 100vh;
   height: var(--vh);
   position: absolute;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -1090,6 +1091,7 @@ body.modal__overlay {
   width: calc(100% - 6rem - var(--paths-overflow));
   min-height: 100vh;
   position: absolute;
+  z-index: 0;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -1105,6 +1107,8 @@ body.modal__overlay {
   text-shadow: 1px 1px 1px #00f0ff;
   font-size: 3rem;
   margin-top: 2rem;
+  position: relative;
+  z-index: 5;
 }
 
 .cards {

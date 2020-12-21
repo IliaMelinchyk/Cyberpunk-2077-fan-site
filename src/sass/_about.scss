@@ -25,6 +25,7 @@
     min-height: 100vh;
     height: var(--vh);
     position: absolute;
+    z-index: 1;
   }
   &__text-shape-left {
     width: 5rem;
