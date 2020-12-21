@@ -1,12 +1,8 @@
 .header {
   width: 100%;
   min-height: 96.5vh;
-  // Фикс высоты для телефонов с меню внизу экрана
-  // min-height: calc(96.5 * var(--vh));
   @include respondRem(tab-port) {
     min-height: 100vh;
-    // Фикс высоты для телефонов с меню внизу экрана
-    // min-height: calc(100 * var(--vh));
   }
   background-image: radial-gradient(rgba($yellow, 0.8), rgba($yellow, 0.8)),
     url(/src/img/background-1.jpg);
@@ -135,9 +131,6 @@
       width: 20rem;
       background-image: url(/src/svg/Xbox_One_logo.svg);
       background-size: 75% auto;
-      @include respondRem(small-phone) {
-        width: 12rem;
-      }
       border-left: 2px solid $black;
       &:hover,
       &:focus {
@@ -152,9 +145,6 @@
       width: 20rem;
       background-image: url(/src/svg/PlayStation_4_logo.svg);
       background-size: 75% auto;
-      @include respondRem(small-phone) {
-        width: 12rem;
-      }
       &:hover,
       &:focus {
         background-color: $blue;
@@ -168,9 +158,6 @@
       width: 20rem;
       background-image: url(/src/svg/pc_logo.svg);
       background-size: 25% auto;
-      @include respondRem(small-phone) {
-        width: 12rem;
-      }
       &:hover,
       &:focus {
         background-color: $blue;

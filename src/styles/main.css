@@ -379,12 +379,6 @@ body {
   border-left: 2px solid #050a0e;
 }
 
-@media only screen and (max-width: 31.25em) {
-  .header__btn__xbox {
-    width: 12rem;
-  }
-}
-
 .header__btn__xbox:hover, .header__btn__xbox:focus {
   background-color: #00f0ff;
   background-size: 80% auto;
@@ -400,12 +394,6 @@ body {
   background-size: 75% auto;
 }
 
-@media only screen and (max-width: 31.25em) {
-  .header__btn__ps4 {
-    width: 12rem;
-  }
-}
-
 .header__btn__ps4:hover, .header__btn__ps4:focus {
   background-color: #00f0ff;
   background-size: 80% auto;
@@ -419,12 +407,6 @@ body {
   width: 20rem;
   background-image: url(/src/svg/pc_logo.svg);
   background-size: 25% auto;
-}
-
-@media only screen and (max-width: 31.25em) {
-  .header__btn__pc {
-    width: 12rem;
-  }
 }
 
 .header__btn__pc:hover, .header__btn__pc:focus {
@@ -1220,6 +1202,9 @@ body.modal__overlay {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-size: 2.6rem;
