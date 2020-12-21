@@ -2,7 +2,7 @@
   background: transparent;
   min-height: 100vh;
   // Фикс высоты для телефонов с меню внизу экрана
-  min-height: calc(100 * var(--vh));
+  height: calc(100 * var(--vh));
   @include flexCenter;
   justify-content: space-around;
   @include respond(1200px) {
@@ -22,6 +22,7 @@
     @include respondRem(tab-port) {
       width: calc(100% - var(--about-overflow));
     }
+    min-height: 100vh;
     height: var(--vh);
     position: absolute;
   }
