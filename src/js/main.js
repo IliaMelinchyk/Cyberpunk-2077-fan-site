@@ -31,5 +31,21 @@ const init = function () {
       .querySelector("header")
       .style.setProperty("--vh", `${window.innerHeight / 100}px`);
   });
+  document
+    .querySelector(".about")
+    .style.setProperty("--vh", `${window.innerHeight / 100}px`);
+  window.addEventListener("resize", () => {
+    document
+      .querySelector(".about")
+      .style.setProperty("--vh", `${window.innerHeight / 100}px`);
+  });
+  document
+    .querySelector(".paths")
+    .style.setProperty("--vh", `${window.innerHeight / 100}px`);
+  window.addEventListener("resize", () => {
+    document
+      .querySelector(".paths")
+      .style.setProperty("--vh", `${window.innerHeight / 100}px`);
+  });
 };
 init();
