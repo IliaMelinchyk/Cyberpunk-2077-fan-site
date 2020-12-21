@@ -2,11 +2,11 @@
   width: 100%;
   min-height: 76.5vh;
   // Фикс высоты для телефонов с меню внизу экрана
-  min-height: calc(76.5 * var(--vh));
+  // min-height: calc(76.5 * var(--vh));
   @include respondRem(tab-port) {
     min-height: 80vh;
     // Фикс высоты для телефонов с меню внизу экрана
-    min-height: calc(80vh * var(--vh));
+    // min-height: calc(80vh * var(--vh));
   }
   background: transparent;
   &__background {

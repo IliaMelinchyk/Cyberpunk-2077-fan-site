@@ -1070,14 +1070,12 @@ body.modal__overlay {
 .paths {
   width: 100%;
   min-height: 76.5vh;
-  min-height: calc(76.5 * var(--vh));
   background: transparent;
 }
 
 @media only screen and (max-width: 56.25em) {
   .paths {
     min-height: 80vh;
-    min-height: calc(80vh * var(--vh));
   }
 }
 
