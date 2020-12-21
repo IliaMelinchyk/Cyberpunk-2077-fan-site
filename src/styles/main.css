@@ -1132,6 +1132,7 @@ body.modal__overlay {
   -webkit-perspective: 150rem;
           perspective: 150rem;
   position: relative;
+  z-index: 2;
   height: 50rem;
   width: 35rem;
   margin: 2rem 1rem;
