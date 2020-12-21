@@ -1190,7 +1190,6 @@ body.modal__overlay {
 
 .footer {
   min-height: 20vh;
-  height: calc(100 * var(--vh));
   width: 100%;
   background-color: #fcee09;
   display: -webkit-box;
@@ -1202,9 +1201,6 @@ body.modal__overlay {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-size: 2.6rem;

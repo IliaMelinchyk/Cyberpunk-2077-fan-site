@@ -35,9 +35,5 @@ const init = () => {
     .style.setProperty("--paths-overflow", `0px`);
 
   aboutWindow(".about__background", ".about");
-
-  mobileWindow("footer");
-  // mobileWindow(".about");
-  // mobileWindow(".paths");
 };
 init();
