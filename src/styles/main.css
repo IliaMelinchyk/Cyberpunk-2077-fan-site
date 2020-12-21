@@ -1148,7 +1148,7 @@ body.modal__overlay {
           clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
-.card__side-front h4 {
+.card__side-front h3 {
   margin-right: 0.5rem;
   font-weight: 700;
   font-size: 3rem;
