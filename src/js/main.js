@@ -10,9 +10,11 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 // Активируется при загрузке страницы
 const init = () => {
-  window.onbeforeunload = () => {
-    window.scrollTo(0, 0);
-  };
+  document.addEventListener("DOMContentLoaded", () => {
+    window.onbeforeunload = () => {
+      window.scrollTo(0, 0);
+    };
+  });
   navListener();
   navMove("#nav-main-page", "#header");
   navMove("#nav-about", "#about");

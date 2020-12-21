@@ -1,5 +1,5 @@
 const aboutWindow = (selector, reference) => {
-  const changeSize = () => {
+  const sizeChange = () => {
     document
       .querySelector(selector)
       .style.setProperty(
@@ -7,18 +7,17 @@ const aboutWindow = (selector, reference) => {
         `${document.querySelector(reference).getBoundingClientRect().height}px`
       );
   };
-  document.addEventListener("DOMContentLoaded", changeSize);
-  window.addEventListener("resize", changeSize);
-  document.onfullscreenchange = changeSize();
+  document.addEventListener("DOMContentLoaded", sizeChange);
+  window.addEventListener("resize", sizeChange);
+  document.onfullscreenchange = sizeChange();
 };
 const mobileWindow = (selector) => {
-  document
-    .querySelector(selector)
-    .style.setProperty("--vh", `${window.innerHeight / 100}px`);
-  window.addEventListener("resize", () => {
+  const mobileChange = () => {
     document
       .querySelector(selector)
       .style.setProperty("--vh", `${window.innerHeight / 100}px`);
-  });
+  };
+  mobileChange();
+  window.addEventListener("resize", mobileChange);
 };
 export { aboutWindow, mobileWindow };
