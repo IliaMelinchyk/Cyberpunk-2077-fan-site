@@ -14,7 +14,7 @@ const init = function () {
     window.scrollTo(0, 0);
   };
   navListener();
-  navMove("#nav-main-page", "#main-page");
+  navMove("#nav-main-page", "body");
   navMove("#nav-about", "#about");
   navMove("#nav-paths", "#paths");
   document
