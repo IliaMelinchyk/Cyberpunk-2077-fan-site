@@ -16,14 +16,4 @@ const aboutWindow = (selector, reference) => {
       `${document.querySelector(reference).getBoundingClientRect().height}px`
     );
 };
-// Не используется в этой версии
-const mobileWindow = (selector) => {
-  const mobileChange = () => {
-    document
-      .querySelector(selector)
-      .style.setProperty("--vh", `${window.innerHeight / 100}px`);
-  };
-  mobileChange();
-  window.addEventListener("resize", mobileChange);
-};
-export { aboutWindow, mobileWindow };
+export default aboutWindow;

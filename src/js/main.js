@@ -4,7 +4,7 @@ import imgLazy from "./imgLazy";
 import sliderChange from "./sliderChange";
 import introAnimation from "./gsapAnimation";
 import { release, setClock } from "./aboutTimer";
-import { aboutWindow, mobileWindow } from "./windowResize";
+import aboutWindow from "./windowResize";
 // Полифилинг
 import "core-js/stable";
 import "regenerator-runtime/runtime";
