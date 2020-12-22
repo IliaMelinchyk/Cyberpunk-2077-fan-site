@@ -10,7 +10,7 @@ const loadImg = (entries, observer) => {
 };
 const imgObserver = new IntersectionObserver(loadImg, {
   root: null,
-  threshold: 0.1,
+  threshold: 0.15,
 });
 const imgLazy = () => {
   document

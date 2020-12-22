@@ -16,6 +16,7 @@ const aboutWindow = (selector, reference) => {
       `${document.querySelector(reference).getBoundingClientRect().height}px`
     );
 };
+// Не используется в этой версии
 const mobileWindow = (selector) => {
   const mobileChange = () => {
     document
