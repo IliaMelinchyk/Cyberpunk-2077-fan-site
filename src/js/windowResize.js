@@ -9,11 +9,13 @@ const aboutWindow = (selector, reference) => {
   };
   document.addEventListener("DOMContentLoaded", sizeChange);
   window.addEventListener("resize", sizeChange);
-  document.onfullscreenchange
-    .querySelector(selector)
-    .style.setProperty(
-      "--vh",
-      `${document.querySelector(reference).getBoundingClientRect().height}px`
-    );
+  try {
+    document.onfullscreenchange
+      .querySelector(selector)
+      .style.setProperty(
+        "--vh",
+        `${document.querySelector(reference).getBoundingClientRect().height}px`
+      );
+  } catch (error) {}
 };
 export default aboutWindow;
