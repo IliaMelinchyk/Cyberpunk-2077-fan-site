@@ -1,4 +1,3 @@
-// Проверяет является ли браузер мобильным
 export default window.mobileCheck = function () {
   let check = false;
   (function (a) {

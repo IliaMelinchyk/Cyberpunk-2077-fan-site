@@ -1,4 +1,3 @@
-// Загрузка изображений плохого качества перед изображениями хорошего
 const loadImg = (entries, observer) => {
   const [entry] = entries;
   if (!entry.isIntersecting) return;

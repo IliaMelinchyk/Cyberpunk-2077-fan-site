@@ -5,14 +5,9 @@ import sliderChange from "./sliderChange";
 import introAnimation from "./gsapAnimation";
 import { release, setClock } from "./aboutTimer";
 import aboutWindow from "./windowResize";
-// Полифилинг
 import "core-js/stable";
 import "regenerator-runtime/runtime";
-// Активируется при загрузке страницы
 const init = () => {
-  window.onbeforeunload = () => {
-    window.scrollTo(0, 0);
-  };
   document.addEventListener("DOMContentLoaded", () => {
     window.onbeforeunload = () => {
       window.scrollTo(0, 0);
