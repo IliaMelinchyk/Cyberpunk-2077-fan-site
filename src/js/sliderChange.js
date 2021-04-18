@@ -8,7 +8,9 @@ const sliderChange = () => {
   const btnManual = document.querySelector(".slider__navigation-manual");
   const btnLeft = document.querySelector(".slider__left");
   const btnRight = document.querySelector(".slider__right");
+
   let counter = 1;
+
   setInterval(() => {
     counter++;
     if (counter > 5) {
@@ -16,6 +18,7 @@ const sliderChange = () => {
     }
     document.getElementById(`radio${counter}`).checked = true;
   }, 5000);
+
   const openModal = () => {
     if (!mobileCheck()) {
       document.body.classList.add("body-hidden");
@@ -29,6 +32,7 @@ const sliderChange = () => {
     modal.classList.remove("modal__hidden");
     modalOverlay.classList.remove("modal__hidden");
   };
+
   const closeModal = () => {
     if (!mobileCheck()) {
       document.body.classList.remove("body-hidden");
@@ -37,24 +41,31 @@ const sliderChange = () => {
     modal.classList.add("modal__hidden");
     modalOverlay.classList.add("modal__hidden");
   };
+
   btnManual.addEventListener(`click`, (e) => {
     const btn = e.target.closest(".slider__manual-btn");
     if (!btn) return;
     counter = +btn.dataset.slider;
   });
+
   btnLeft.addEventListener(`click`, () => {
     counter--;
     if (counter === 0) counter = 5;
     document.getElementById(`radio${counter}`).checked = true;
   });
+
   btnRight.addEventListener(`click`, () => {
     counter++;
     if (counter > 5) counter = 1;
     document.getElementById(`radio${counter}`).checked = true;
   });
+
   btnsOpenModal.addEventListener("click", openModal);
+
   btnCloseModal.addEventListener("click", closeModal);
+
   modalOverlay.addEventListener("click", closeModal);
+
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !modal.classList.contains("modal__hidden")) {
       closeModal();

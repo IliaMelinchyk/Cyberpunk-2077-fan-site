@@ -1,4 +1,5 @@
 const release = "2020-12-10";
+
 const getTime = (release) => {
   const t = Date.parse(new Date()) - Date.parse(release);
   const days = Math.floor(t / (1000 * 60 * 60 * 25));
@@ -13,6 +14,7 @@ const getTime = (release) => {
     seconds: seconds,
   };
 };
+
 const getZero = (num) => {
   if (num >= 0 && num < 10) {
     return `0${num}`;
@@ -20,6 +22,7 @@ const getZero = (num) => {
     return num;
   }
 };
+
 const setClock = (release) => {
   const timer = document.querySelector(".timer");
   const days = timer.querySelector(`#days`);
@@ -39,4 +42,5 @@ const setClock = (release) => {
   updateClock();
   setInterval(updateClock, 1000);
 };
+
 export { release, setClock };

@@ -1,4 +1,5 @@
 import gsap from "gsap";
+
 const introAnimation = () => {
   const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
   tl.to("body", 0, { className: "body-hidden" });
@@ -12,4 +13,5 @@ const introAnimation = () => {
   tl.fromTo(".header__logo", { y: "-150%" }, { y: "0%", duration: 1 }, "-=0.9");
   tl.to(".intro", 0, { display: "none" });
 };
+
 export default introAnimation;

@@ -7,6 +7,7 @@ import { release, setClock } from "./aboutTimer";
 import aboutWindow from "./windowResize";
 import "core-js/stable";
 import "regenerator-runtime/runtime";
+
 const init = () => {
   document.addEventListener("DOMContentLoaded", () => {
     window.onbeforeunload = () => {
@@ -31,4 +32,5 @@ const init = () => {
 
   aboutWindow(".about__background", ".about");
 };
+
 init();

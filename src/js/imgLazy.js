@@ -7,13 +7,16 @@ const loadImg = (entries, observer) => {
   });
   observer.unobserve(entry.target);
 };
+
 const imgObserver = new IntersectionObserver(loadImg, {
   root: null,
   threshold: 0.15,
 });
+
 const imgLazy = () => {
   document
     .querySelectorAll("img[data-src]")
     .forEach((img) => imgObserver.observe(img));
 };
+
 export default imgLazy;

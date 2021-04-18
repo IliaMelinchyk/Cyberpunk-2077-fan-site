@@ -1,5 +1,7 @@
 import mobileCheck from "./mobileCheck.js";
+
 let navCheck = 0;
+
 const navView = () => {
   document.querySelector(".nav__btn").classList.toggle("nav__open");
   document
@@ -19,13 +21,16 @@ const navView = () => {
     document.body.classList.toggle("body-hidden");
   }
 };
+
 const navListener = () => {
   document.querySelector(".nav__btn").addEventListener("click", navView);
 };
+
 const navMove = (btn, section) => {
   document.querySelector(btn).addEventListener("click", () => {
     navView();
     document.querySelector(section).scrollIntoView({ behavior: "smooth" });
   });
 };
+
 export { navListener, navMove };
